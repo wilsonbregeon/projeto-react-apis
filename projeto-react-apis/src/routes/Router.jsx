@@ -1,6 +1,6 @@
-import { HomePage } from '../pages/HomePage'
-import { Pokedex } from '../pages/Pokedex'
-import { DetailPage } from '../pages/DetailPage'
+import { PokemonsListPage} from '../pages/PokemonsListPage/PokemonsListPage'
+import { PokedexPage } from '../pages/PokedexPage/PokedexPage'
+import { PokemonsDetailPage } from '../pages/PokemonsDetailPage/PokemonsDetailPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ErrorPage } from '../pages/ErrorPage'
 
@@ -8,9 +8,9 @@ export const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index  element={<HomePage />} />
-                <Route path='pokedex' element={<Pokedex />} />
-                <Route path='detail-page' element={<DetailPage />} />
+                <Route index  element={<PokemonsListPage />} />
+                <Route path='pokedex' element={<PokedexPage />} />
+                <Route path='detail-page' element={<PokemonsDetailPage />} />
                 <Route path='*' element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
