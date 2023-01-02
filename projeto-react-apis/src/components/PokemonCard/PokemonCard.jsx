@@ -1,70 +1,22 @@
-import { Article, Main } from "./styled"
+import { useNavigate } from "react-router-dom"
+import { goToPokemonsDetailPage } from "../../routes/coordinator"
+import { Article, Img, Main, Section } from "./styled"
 
+export const PokemonCard = ({ pokemon, image, abilities, id }) => {
 
-export const PokemonCard = () => {
+    const navigate = useNavigate()
+    
     return (
         <>
             <Main>
                 <Article>
-                    <h1>Pokemon 1</h1>
-                    <button onClick={() => goToPokemonsDetailPage(navigate)}>Ir para página de detalhes</button>
-                </Article>
-                <Article>
-                    <h1>Pokemon 2</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 3</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 4</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 5</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 6</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 7</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 8</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 9</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 10</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 11</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 12</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 13</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 14</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 15</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 16</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 17</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 18</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 19</h1>
-                </Article>
-                <Article>
-                    <h1>Pokemon 20</h1>
+                    <Section>
+                    <h2>#{id}</h2>
+                    <h2>{pokemon}</h2>
+                    <Img src={image} alt={pokemon} />
+                    <button onClick={() => goToPokemonsDetailPage(navigate)}>Detalhes</button>
+                    <button onClick={() => alert("Pokemon adicionado à pokédex")}>Capturar</button>
+                    </Section>
                 </Article>
             </Main>
         </>

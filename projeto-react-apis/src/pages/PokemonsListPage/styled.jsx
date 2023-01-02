@@ -2,12 +2,8 @@
 
 import styled from "styled-components"
 
-export const Header = styled.header`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    button{
-        background-color: #33A4F5;
+export const Button = styled.button`
+    background-color: #33A4F5;
         border: #33A4F5;
         border-radius: 6px;
         color: #FFFFFF ;
@@ -16,11 +12,7 @@ export const Header = styled.header`
         margin-right: 4%;
         font-size: larger;
         cursor: pointer;
-    }
-    img{
-        justify-content: center;
-        margin-left: 40%;
-    }
+        display: flex;
 `
 
 export const Main = styled.main`
@@ -34,4 +26,8 @@ export const H2 = styled.h2`
     padding-top: 2rem;
     padding-left: 2rem;
     font-size: 2rem;
+`
+export const Div = styled.div`
+    height: 8rem;
+    background: transparent;
 `
