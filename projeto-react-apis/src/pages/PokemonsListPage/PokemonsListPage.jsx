@@ -1,30 +1,46 @@
-import React from "react"
-import { useNavigate } from "react-router-dom"
-import logoPokemon from "../../assets/pokemon.svg"
-import { Header, Main, H2 } from "./styled"
-import { goToPokedexPage, goToPokemonsDetailPage } from "../../routes/coordinator"
-import { PokemonCard } from "../../components/PokemonCard/Pokemoncard"
-
+import { Main, H2, Div } from "./styled"
+import { PokemonCard } from "../../components/PokemonCard/PokemonCard"
+import { HeaderPokemonsListPage } from "../../components/Header/HeaderPokemonsListPage"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
 export const PokemonsListPage = () => {
-    const navigate = useNavigate()
+
+    const [error, setError] = useState(null)
+    const [pokemons, setPokemons] = useState([])
+
+    useEffect(() => {
+        searchPokemon()
+    }, [])
+
+    const searchPokemon = () => {
+        const endpoints = []
+        for (let i = 1; i <= 20; i++) {
+            endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+        }
+        console.log(endpoints)
+        axios
+            .all(endpoints.map((endpoint) => axios
+                .get(endpoint)))
+            .then((res) => setPokemons(res))
+    }
 
     return (
         <>
-        
-            <Header>
-                <img src={logoPokemon} alt="" />
-                <button onClick={() => goToPokedexPage(navigate)}>Pokédex</button>
-            </Header>
-            
+            <HeaderPokemonsListPage />
             <Main>
-                <H2>Todos Pokémons</H2>
-                <PokemonCard >
-                
-                </PokemonCard>
+                {pokemons.map((pokemon, key) => {
+                    return (
+                        <PokemonCard
+                            key={key}
+                            id={pokemon.data.id}
+                            pokemon={pokemon.data.name}
+                            image={pokemon.data.sprites.front_default}
+                            abilities={pokemon.data.species.url}
+                        />
+                    )
+                })}
             </Main>
-{/* 
-            <button onClick={() => goToPokemonsDetailPage(navigate)}>Ir para página de detalhes</button> */}
         </>
     )
 }

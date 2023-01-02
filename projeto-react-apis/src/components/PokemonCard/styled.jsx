@@ -1,3 +1,5 @@
+//CSS PokemonCard
+
 import styled from "styled-components";
 
 export const Main = styled.main`
@@ -13,5 +15,17 @@ export const Article = styled.article`
     margin: 2rem;
     text-align: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
-
+export const Img = styled.img`
+    
+   display: flex;
+   
+   
+`
+export const Section = styled.section`
+    
+    
+`
