@@ -11,7 +11,7 @@ export function Header()  {
     const context = useContext(GlobalContext)
 
     const params = useParams()
-    const pokeName = params.PokemonName
+    const pokeName = params.pokemonName
 
     const thisPokemon = context.pokemonDetail.find(pokemon => pokemon.name === pokeName)
     const isPokemonInPokedex = context.pokedex.find(pokemon => pokemon.name === pokeName)
