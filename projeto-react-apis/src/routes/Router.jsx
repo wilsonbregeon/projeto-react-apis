@@ -1,17 +1,15 @@
-import { PokemonsListPage} from '../pages/PokemonsListPage/PokemonsListPage'
-import { PokedexPage } from '../pages/PokedexPage/PokedexPage'
-import { PokemonsDetailPage } from '../pages/PokemonsDetailPage/PokemonsDetailPage'
+import { PokemonsHome} from '../pages/PokemonsHome/PokemonsHome'
+import { Pokedex } from '../pages/Pokedex/Pokedex'
+import { PokemonDetails } from '../pages/PokemonDetails/PokemonsDetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { ErrorPage } from '../pages/ErrorPage'
 
 export const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index  element={<PokemonsListPage />} />
-                <Route path='pokedex' element={<PokedexPage />} />
-                <Route path='detail-page' element={<PokemonsDetailPage />} />
-                <Route path='*' element={<ErrorPage />} />
+                <Route index  element={<PokemonsHome />} />
+                <Route path='pokedex' element={<Pokedex />} />
+                <Route path='detail-page' element={<PokemonDetails/>} />
             </Routes>
         </BrowserRouter>
     )
