@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Modal } from './components/Modal/Modal'
 import React, { useEffect, useState } from 'react'
 import { GlobalContext } from './context/GlobalContext'
 import { GlobalStyle } from './GlobalStyle'

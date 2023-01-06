@@ -2,11 +2,12 @@ import { useContext } from "react"
 import { GlobalContext } from "../../context/GlobalContext"
 import { MainModal } from "./styled"
 
-function Modal(props) {
+export function Modal(props) {
 
     const context = useContext(GlobalContext)
 
     const renderModal = () => {
+        console.log(props)
         switch (props.action) {
             case 'add':
                 return <>
@@ -28,7 +29,7 @@ function Modal(props) {
     }
     return (
         <>
-            <MainModal onClick={() => { context.setShowModal(false) }}>
+            <MainModal onClick={() => { context.setModalShow(false) }}>
                 {renderModal()}
             </MainModal>
         </>
