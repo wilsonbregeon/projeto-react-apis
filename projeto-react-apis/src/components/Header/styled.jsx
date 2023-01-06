@@ -6,19 +6,19 @@ export const MainHeader = styled.header`
     display: flex;
     width: 100%;
 
-    img{
+    img {
         width: 19.063rem;
         height: 6.875rem;
     }
 
-    div{
+    div {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 33.30%;
     }
 
-    a{
+    a {
         font-family: 'Poppins';
         font-weight: bold;
         font-size: 1.25rem;
@@ -31,9 +31,9 @@ export const MainHeader = styled.header`
 `
 
 export const ButtonDeletePokemon = styled.button`
-    width: 14.125rem;
+    width: 16rem;
     height: 3.563rem;
-    border: 0.5rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +45,7 @@ export const ButtonDeletePokemon = styled.button`
 
     :hover {
         cursor: pointer;
+        background-color: #fc7070;
     }
 `
 
@@ -63,6 +64,7 @@ export const ButtonAddPokemon = styled.button`
 
     :hover {
         cursor: pointer;
+        background-color: #44acf7;
     }
 `
 
@@ -79,5 +81,6 @@ export const ButtonPokedex = styled.button`
 
     :hover {
         cursor: pointer;
+        background-color: #44acf7;
     }
 `

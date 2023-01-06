@@ -15,6 +15,7 @@ export const MainModal = styled.div`
 
     :hover{
         cursor: pointer;
+        background-color: #e4e4e4;
     }
     
     h2{
