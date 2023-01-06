@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const MainHeader = styled.header`
-    background-color: #ffff;
-    height: 160px;
+    background-color: white;
+    height: 10rem;
     display: flex;
     width: 100%;
 
     img{
-        width: 305px;
-        height: 110px;
+        width: 19.063rem;
+        height: 6.875rem;
     }
 
     div{
@@ -21,7 +21,7 @@ export const MainHeader = styled.header`
     a{
         font-family: 'Poppins';
         font-weight: bold;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-decoration-line: underline;
     }
 
@@ -31,13 +31,13 @@ export const MainHeader = styled.header`
 `
 
 export const ButtonDeletePokemon = styled.button`
-    width: 226px;
-    height: 57px;
-    border: 8px;
+    width: 14.125rem;
+    height: 3.563rem;
+    border: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Poppins';
     background-color: #FF6262;
     color: white;
@@ -49,9 +49,9 @@ export const ButtonDeletePokemon = styled.button`
 `
 
 export const ButtonAddPokemon = styled.button`
-    width: 256px;
-    height: 57px;
-    border-radius: 8px;
+    width: 16rem;
+    height: 3.563rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,14 +67,14 @@ export const ButtonAddPokemon = styled.button`
 `
 
 export const ButtonPokedex = styled.button`
-    width: 287px;
-    height: 74px;
+    width: 17.938rem;
+    height: 4.625rem;
     background-color: #33A4F5;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     color: white;
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: none;
 
     :hover {

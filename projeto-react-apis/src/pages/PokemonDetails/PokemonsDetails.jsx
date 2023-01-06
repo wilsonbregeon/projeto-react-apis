@@ -20,7 +20,7 @@ export function PokemonDetails() {
                     <DisplayCards>
                         {context.isLoading ? <img src={pokeball} alt="Loading" />
                             :
-                            context.detailPokemon
+                            context.pokemonDetail
                                 .filter((pokemon) => pokemon.name === pokeName)
                                 .map((pokemon) => (
                                     <CardDetails
